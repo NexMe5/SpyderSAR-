@@ -8,7 +8,8 @@ const FRAME_COUNT = 120;
 
 export const frames = Array.from({ length: FRAME_COUNT }, (_, i) => {
   const num = String(i + 1).padStart(3, '0');
-  return `/frames/ezgif-frame-${num}.jpg`;
+  // Use Vite's BASE_URL so this works on both localhost and GitHub Pages (/SpyderSAR-/)
+  return `${import.meta.env.BASE_URL}frames/ezgif-frame-${num}.jpg`;
 });
 
 export default frames;
