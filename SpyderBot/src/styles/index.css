@@ -1,0 +1,175 @@
+/* ===================================================
+   SpiderSAR Design System – Global CSS
+   =================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Color Tokens */
+  --bg:          #505468;
+  --bg-dark:     #3b3e50;
+  --bg-deeper:   #2c2f3f;
+  --text:        #5B5F71;
+  --text-light:  #8a8ea8;
+  --text-on-dark:#c8cbe0;
+  --accent:      #C49F8C;
+  --accent-dark: #a8806a;
+  --surface:     #FFFFFF;
+  --surface-alt: #f2f0ee;
+  --card-bg:     rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.10);
+  --shadow:      0 8px 40px rgba(0,0,0,0.35);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.22);
+
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* Spacing */
+  --section-pad: clamp(60px, 10vw, 120px) 5vw;
+  --radius:      12px;
+  --radius-lg:   24px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-dark);
+  color: var(--text-on-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  position: relative;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deeper); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ─── Utility Classes ─── */
+.section-label {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  color: var(--surface);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-on-dark);
+  opacity: 0.75;
+  max-width: 560px;
+  line-height: 1.8;
+}
+
+.accent-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--bg-deeper);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 13px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.28s cubic-bezier(0.4,0,0.2,1);
+  letter-spacing: 0.03em;
+}
+.accent-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196,159,140,0.4);
+}
+
+.ghost-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--surface);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 12px 26px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: all 0.28s cubic-bezier(0.4,0,0.2,1);
+}
+.ghost-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-6px) rotate3d(1,0,0,1deg);
+  box-shadow: var(--shadow-card);
+}
+
+/* ─── Divider ─── */
+.divider {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  border-radius: 2px;
+  margin: 16px 0 28px;
+}

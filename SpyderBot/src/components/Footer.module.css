@@ -1,0 +1,70 @@
+.footer {
+  background: var(--bg-deeper);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 56px 5vw 36px;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--surface);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accent { color: var(--accent); }
+
+.tagline {
+  font-size: 0.82rem;
+  color: var(--text-on-dark);
+  opacity: 0.5;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.links a {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-on-dark);
+  padding: 5px 12px;
+  border-radius: 50px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.links a:hover {
+  color: var(--accent);
+  background: rgba(196,159,140,0.08);
+}
+
+.divLine {
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 8px 0;
+}
+
+.copy {
+  font-size: 0.76rem;
+  color: var(--text-on-dark);
+  opacity: 0.4;
+}
+
+.smallAccent { color: var(--accent); opacity: 1; }

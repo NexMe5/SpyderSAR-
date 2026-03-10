@@ -1,0 +1,93 @@
+.section {
+  padding: var(--section-pad);
+  background: linear-gradient(180deg, var(--bg-deeper) 0%, var(--bg-dark) 100%);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header { margin-bottom: 40px; }
+
+.tableWrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--card-border);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  font-family: var(--font-body);
+}
+
+.table thead {
+  background: rgba(196,159,140,0.15);
+  border-bottom: 1px solid rgba(196,159,140,0.3);
+}
+
+.table th {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  padding: 16px 20px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.2s;
+}
+
+.table tbody tr:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.table td {
+  padding: 13px 20px;
+  color: var(--text-on-dark);
+  opacity: 0.85;
+}
+
+.num { opacity: 0.45 !important; font-size: 0.75rem; }
+.name { font-weight: 500; color: var(--surface) !important; opacity: 1 !important; }
+.center { text-align: center; }
+
+.note {
+  font-size: 0.78rem;
+  opacity: 0.55 !important;
+  font-style: italic;
+}
+
+.optRow td { opacity: 0.55; }
+.optRow .name { color: var(--text-on-dark) !important; }
+
+.totalRow {
+  background: rgba(196,159,140,0.1);
+  border-top: 1.5px solid rgba(196,159,140,0.3);
+}
+
+.totalLabel {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--surface) !important;
+  opacity: 1 !important;
+  padding: 18px 20px;
+  text-align: right;
+}
+
+.totalVal {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--accent) !important;
+  opacity: 1 !important;
+  white-space: nowrap;
+  text-align: center;
+}

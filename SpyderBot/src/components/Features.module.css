@@ -1,0 +1,68 @@
+.section {
+  padding: var(--section-pad);
+  background: var(--bg-dark);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header { margin-bottom: 52px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: default;
+}
+
+.featIcon {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--surface);
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: var(--text-on-dark);
+  opacity: 0.8;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.badge {
+  font-family: var(--font-heading);
+  font-size: 0.67rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: rgba(196,159,140,0.14);
+  border: 1px solid rgba(196,159,140,0.3);
+  color: var(--accent);
+}
+
+@media (max-width: 680px) {
+  .grid { grid-template-columns: 1fr; }
+}
